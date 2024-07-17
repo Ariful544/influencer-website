@@ -133,14 +133,23 @@ nav .fa {
   border-bottom: 2px solid rgba(192, 204, 218, 0.5);
 }
 /* popular-collection section style start here  */
+.popular-collection {
+  margin-bottom: 100px;
+}
+.popular-collection .see-more {
+  float: inline-end;
+  margin-right: 20px;
+  color: var(--bg-primary);
+}
 .popular-collection > h3 {
   text-align: center;
   margin-bottom: 3rem;
 }
-.card-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
 }
 .card {
   width: 335px;
@@ -182,9 +191,80 @@ nav .fa {
   line-height: 143%;
   letter-spacing: 1.8%;
 }
+/* featured-product style start here  */
+.featured-product {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+}
+.featured-product-image {
+  width: 100%;
+}
+.featured-product-content > h2 {
+  color: rgb(10, 8, 38);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.featured-product-content > p {
+  color: rgb(108, 108, 108);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 1rem;
+}
+.featured-product-content > button {
+  padding: 10px 24px;
+  background: rgb(224, 44, 109);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  border: 1px solid rgb(224, 44, 109);
+}
+footer {
+  max-width: 1536px;
+  min-height: 300px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  background: #0a0826;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.footer-content .para{
+    font-size: 14px;
+}
+.footer-content .social{
+    display: flex;
+    gap: 20px;
+}
+.footer-content .icon{
+    width:40px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    background:rgba(255,255,255, 0.1);
+    border-radius: 50%;
+}
+
 /* responsive media queries */
 @media screen and (max-width: 576px) {
-  .header {
+  .header,
+  .popular-collection {
     width: 100%;
   }
   #hero {
@@ -210,5 +290,17 @@ nav .fa {
     grid-template-columns: repeat(4, 1fr);
     margin-top: 70px;
     gap: 10px;
+  }
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .featured-product {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
   }
 }
