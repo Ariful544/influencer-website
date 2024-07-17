@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+/* font-family: "Manrope", sans-serif;  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #fff;
+}
+/* default styles  */
+.container {
+  max-width: 1110px;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+:root {
+  --border: 1px solid red;
+  --cl-primary: rgb(58, 58, 58);
+  --cl-secondary: rgb(24, 25, 31);
+  --cl-dark: rgb(10, 8, 38);
+  --bg-primary: rgb(224, 44, 109);
+}
+h3 {
+  color: var(--cl-secondary);
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+/* header section style start here */
+.header {
+  margin-top: 5rem;
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav > h2 {
+  color: var(--cl-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-links ul li {
+  list-style-type: none;
+  position: relative;
+}
+.nav-links ul li:nth-last-child(-n + 2)::after {
+  display: none;
+}
+.nav-links ul li::after {
+  content: "";
+  height: 3px;
+  display: block;
+  width: 0%;
+  background-color: var(--bg-primary);
+  transition: 0.3s;
+}
+nav .fa {
+  display: none;
+}
+.nav-links ul li:hover::after {
+  width: 100%;
+  border-radius: 3px;
+}
+.nav-links ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--cl-primary);
+}
+.nav-links ul li a i {
+  font-size: 1.8rem;
+  margin-top: 5px;
+}
+.nav-links ul li a i:hover {
+  color: var(--bg-primary);
+}
+/* hero section style start here */
+#hero {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  gap: 100px;
+  padding-right: 40px;
+}
+
+#hero .hero-content > h1 {
+  color: var(--cl-primary);
+  font-size: 3.25rem;
+  font-weight: 700;
+  line-height: 70px;
+  margin-bottom: 1rem;
+}
+#hero .hero-content > p {
+  color: var(--cl-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 1rem;
+}
+.btn {
+  background: var(--bg-primary);
+  border-radius: 40px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  border: 1px solid var(--bg-primary);
+}
+#hero .hero-image {
+  background: url(../images/Circle-design.svg) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#hero .hero-image img {
+  margin: 50px 26px 0 0;
+}
+/* companies section style start here  */
+.companies {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  min-height: 120px;
+  align-items: center;
+  padding: 0 50px;
+  margin-bottom: 100px;
+  border-top: 2px solid rgba(192, 204, 218, 0.5);
+  border-bottom: 2px solid rgba(192, 204, 218, 0.5);
+}
+/* popular-collection section style start here  */
+.popular-collection > h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+}
+.card {
+  width: 335px;
+  height: 476px;
+  padding: 15px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+}
+.card img {
+  width: 100%;
+}
+.card .price {
+  margin: 8px 0 8px 0;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.card .rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.card .rating i {
+  color: Orange;
+}
+.card .rating span {
+  color: rgb(94, 99, 102);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  text-align: left;
+}
+.card .desc {
+  color: rgb(120, 120, 133);
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 143%;
+  letter-spacing: 1.8%;
+}
+/* responsive media queries */
+@media screen and (max-width: 576px) {
+  .header {
+    width: 100%;
+  }
+  #hero {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+  }
+  nav .fa {
+    display: block;
+    font-size: 1.5rem;
+  }
+  #hero {
+    width: 100%;
+  }
+  #hero .hero-content {
+    text-align: center;
+  }
+  #hero .hero-image img {
+    width: 100%;
+  }
+  .companies {
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 70px;
+    gap: 10px;
+  }
+}
